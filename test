@@ -17,7 +17,8 @@ def find_and_enter():
     for i in urls:
         weblink.append(i.get_attribute('href'))
     for i in weblink:
-        driver.get(weblink[i])
+        cmd = 'window.open(\'' + i + '\')'
+        driver.execute_script(cmd)
     input('按任意键退出')
     
 if __name__ == '__main__':
