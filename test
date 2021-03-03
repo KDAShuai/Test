@@ -1,0 +1,14 @@
+from selenium import webdriver
+import time
+
+
+target_link = '' # 单引号内填写目标网页的网址
+find_word = '' # 单引号内填写需要查找的字段
+weblink = [] # 此list用于保存需打开网址
+
+
+def connect():
+    print('启动Chrome')
+    driver = webdriver.Chrome()
+    driver.get('target_link') # 打开目标网页
+    
