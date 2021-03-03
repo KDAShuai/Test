@@ -11,7 +11,7 @@ def find_and_enter():
     global weblink
     print('启动Chrome')
     driver = webdriver.Chrome()
-    driver.get('https://' + target_link) # 打开目标网页
+    driver.get(target_link) # 打开目标网页
     time.sleep(3) # 等待页面加载
     urls = driver.find_elements_by_partial_link_text(find_word)
     for i in urls:
