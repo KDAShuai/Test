@@ -21,5 +21,5 @@ def find_and_enter():
     input('按任意键退出')
     
 if __name__ == '__main__':
-    find&enter()
+    find_and_enter()
     
