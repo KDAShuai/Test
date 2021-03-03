@@ -7,8 +7,19 @@ find_word = '' # 单引号内填写需要查找的字段
 weblink = [] # 此list用于保存需打开网址
 
 
-def connect():
+def find&enter():
+    global weblink
     print('启动Chrome')
     driver = webdriver.Chrome()
-    driver.get('target_link') # 打开目标网页
+    driver.get('https://' + target_link) # 打开目标网页
+    time.sleep(3) # 等待页面加载
+    urls = driver.find_elements_by_partial_link_text(find_word)
+    for i in urls:
+        weblink.append(url.get_attribute('href'))
+    for i in weblink:
+        driver.get(weblink[i])
+    input('按任意键退出')
+    
+if __name__ == '__main__':
+    find&enter()
     
